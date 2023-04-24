@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Tarjeta de crédito válida</title>
+  <title>Cartão de Crédito Válido</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -13,8 +13,8 @@
   </header>
   <main>
     <form action="">
-      <input type="text" name="credit" id="cartao">
-      <button type="submit" onclick="maskify()"></button>
+      <input type="text" name="credit" id="cartao" required minlength="1" placeholder="digite 9 números do cartão">
+      <button type="submit" onclick="maskify()">Validador</button>
     </form>
   </main>
   <footer></footer>

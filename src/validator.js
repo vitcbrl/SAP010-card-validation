@@ -1,45 +1,50 @@
 const validator = {
-  maskify() {
-    /*maskify é a function que esconder meus digitos e mostrar o mue alert, ela ta no meu button de onclick no meu index.html*/
-    let numbercard = document.getElementById("cartao").value;
-    /*linha que pego o valor do meu input text atraves do id*/
-    let result = isValid(numbercard);
-    /*linha que meu resultado vai armazenar meu algoritmo de luhn e aplicar ele no meu input text*/
-    let hidden = "**** *****" + numbercard.slice(-4);
-    /*linha que minha variavel recebe uma string de ** e concateno com o meu valor de input text e uso o metodo .slice() -> 
-    
-    ah dois metodos prototype.slice() o primero é o String.prototype.slice() que foi o utilizado aqui pois o valor da minha variavel é string
-    -> esse metodo extrai uma parte de uma string e retorna como uma nova string sem modificar a string original.
-    Exemplo: const str = 'The quick brown fox jumps over the lazy dog.';
-    console.log(str.slice(31));Expected output: "the lazy dog." esse metodo conta os espaços tambem
+  isValid: function (creditCardNumber) {
+    // Remove todos os espaços em branco da entrada do usuário
+    creditCardNumber = creditCardNumber.replace(/\s/g, "");
 
-    -> o segundo é o Array.prototype.slice()
-    esse metodo retorna uma copia de um array criando entre inicio e fim. o inicio fica antes do . que nesse caso é o numbercard. quando colocado em negativo -, o metodo se inicia no final do array.*/
-    alert(`Os ultimos quatro digitos do cartão é ${hidden} e ele é ${result}`);
+    // Usando uma expressão regex verifico se o valor tem apenas números(dentro da minha condição estou testando se consiste em apenas digitos o-9)e se não contem nenhum outro caractere como letras ou simbolos. esse ! é um não então estou dizendo que se não consistir em apenas numeros épra retornar false
+    if (!/^\d+$/.test(creditCardNumber)) {
+      return false;
+    }
+
+    // Inverte os números do valor
+    const reversed = creditCardNumber.split("").reverse().join("");
+
+    // Soma os dígitos nas posições ímpares
+    let sum = 0;
+    for (let i = 0; i < reversed.length; i++) {
+      let digit = parseInt(reversed[i]);
+      //O método reverse() inverte os itens de um array. O primeiro elemento do array se torna o último e o último torna-se o primeiro.
+      if (i % 2 !== 0) {
+        digit *= 2;
+        if (digit > 9) {
+          digit -= 9;
+        }
+      }
+      sum += digit;
+    }
+
+    // O número é válido se a soma dos dígitos é múltiplo de 10
+    return sum % 10 === 0;
   },
 
-  isValid(creditCardNumber) {
-    let soma = 0;
-    let resto = 0;
-    let tamanho = creditCardNumber.legth;
-    let digito = parseInt(creditCardNumber[tamanho - 1]);
-    for (var i = tamanho - 2; i >= 0; i -= 2) {
-      let num = parseInt(creditCardNumber[i]);
-      num = num * 2;
-      if (num > 9) {
-        num = num - 9;
-      }
-      soma += num;
+  maskify: function (creditCardNumber) {
+    // Se o valor for menor ou igual a 4 caracteres, retorna ele mesmo
+    if (creditCardNumber.length <= 4) {
+      return creditCardNumber;
     }
-    for (let i = tamanho - 3; i >= 0; i -= 2) {
-      soma += parseInt(creditCardNumber[i]);
+
+    // Substitui todos os caracteres, exceto os últimos 4, por #
+    const maskLength = creditCardNumber.length - 4;
+    let mask = "";
+    for (let i = 0; i < maskLength; i++) {
+      // Substitui por um número aleatório ou pelo emoji 🐱
+      mask += Math.random() < 0.5 ? "#" : "🐱";
+      //A função Math.random() retorna um número pseudo-aleatório no intervalo
     }
-    resto = soma % 10;
-    if ((resto === 0 && digito === 0) || 10 - resto === digito) {
-      return "valido";
-    } else {
-      return "invalido";
-    }
+    return mask + creditCardNumber.substring(maskLength);
+    //esse metodo substring extrai caracteres entre indices (posições) de uma string e retorna uma substring
   },
 };
 

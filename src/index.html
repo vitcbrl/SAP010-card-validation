@@ -9,13 +9,13 @@
 
 <body>
   <header>
-    <h1>Confira se seu cartão é valido para compras nessa loja</h1>
+    <h1>Bem vinde a loja Plantas Carnivoras</h1>
+    <p>Verifique agora mesmo se seu cartão é valido</p>
   </header>
   <main>
-    <form action="">
-      <input type="text" name="credit" id="cartao" required minlength="1" placeholder="digite 9 números do cartão">
-      <button type="submit" onclick="maskify()">Validador</button>
-    </form>
+    <label for="card-number">Digite o número</label>
+    <input type="text" id="card-number" required>
+    <button id="test">Verificar</button>
   </main>
   <footer></footer>
   <script src="index.js" type="module"></script>

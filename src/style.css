@@ -1,0 +1,30 @@
+body{
+  background-image: url("images/img1.jpg");
+  background-size: contain;
+}
+
+ul{
+  list-style-type: none; /*tira as bolinhas das listas*/
+  margin: 0;/*define a area de margem */
+  padding: 0; /*Aproxima o texto da borda da pagina*/
+  background-color: violet; /*coloca cor no meu espaço determinado do header*/
+  border:1px solid #CCC; 
+  overflow: hidden;
+}
+
+li{
+  text-align: center; /*deixa bem no centro da pagina*/
+  border-bottom: 1px solid red; /*coloca linhas como se fosse de cadernos*/
+  float: left; /*deixa uma palavra do lado da outra e diminui o tamanho do quadrado*/
+  display: block;/*define se vai ser tratado como bloco ou elemento*/
+  color: black;
+  padding: 8px 16px; /*dar espaçamento entre as linhas*/
+  text-decoration: none;
+  font-size: 1.2em; /*aumenta o tamanho da letra*/
+}
+
+
+#meio{
+  background-color: red;
+  
+}

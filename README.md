@@ -10,9 +10,9 @@ O objetivo desse projeto foi criar um interface onde o usuário pode colocar seu
 
 Ao acessar a plataforma da loja plantas carnivoras (index.html) o usuário vai ver um campo para preencher seus dados do cartão e um botão de verificação. Após clicar no botão aparece um alert no topo da tela do usuário dizendo se o seu cartão é válido ou não.
 
-![preview](./src/images/Index.html)
-
 ### [Acesse Plantas Carnivoras](https://vitcbrl.github.io/SAP010-card-validation/)
+
+![preview](./src/images/Index.html)
 
 ## Lógica
 

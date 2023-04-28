@@ -4,7 +4,7 @@ Projeto criado na bootcamp Laboratoria Sap010, onde é possivel usar o algoritmo
 
 ## Sobre o projeto
 
-O objetivo desse projeto foi criar um interface onde o usuário pode colocar seu numero de cartão de crédito e vê se ele é válido ou não e dessa forma conseguir desconto na loja online sem complicações.
+O objetivo desse projeto foi criar um interface onde o usuário pode colocar seu numero de cartão de crédito e vê se ele é válido ou não e dessa forma conseguir desconto na loja online Plantas Carnivoras sem complicações.
 
 ## Experiência do usuário
 

@@ -1,6 +1,15 @@
 import validator from "./validator.js";
 
-document.getElementById("test").addEventListener("click", checkCardNumber);
+document.getElementById("test").addEventListener("click", function () {
+  const cardNumber = document.getElementById("card-number").value;
+  if (!cardNumber) {
+    alert("Por favor, preencha o campo de número do cartão de crédito.");
+    return;
+  }
+
+  checkCardNumber();
+});
+
 function checkCardNumber() {
   const cardNumber = document.getElementById("card-number").value;
   if (validator.isValid(cardNumber)) {

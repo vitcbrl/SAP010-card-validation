@@ -115,8 +115,8 @@ li{
  
  button{
    font-family: 'Space Grotesk',sans-serif; ;
-   color: #fff;
-   background-color: hsl(278, 68%, 11%);
+   color: black;
+   background-color: #887471;
    display: flex;
    border-radius: 6px;
    height: 40px;
@@ -127,7 +127,7 @@ li{
  }
  
  button:hover{
-   background-color:hsl(278, 67%, 18%); 
+   background-color:#A1A75C; 
    transition: ease-in-out 0.5s ;
  }
  

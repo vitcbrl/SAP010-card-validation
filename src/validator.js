@@ -40,7 +40,7 @@ const validator = {
     let mask = "";
     for (let i = 0; i < maskLength; i++) {
       // Substitui por um número aleatório ou pelo emoji 🐱
-      mask += Math.random() < 0.5 ? "#" : "🐱";
+      mask += "#";
       //A função Math.random() retorna um número pseudo-aleatório no intervalo
     }
     return mask + creditCardNumber.substring(maskLength);

@@ -15,3 +15,11 @@ Ao acessar a plataforma da loja plantas carnivoras (index.html) o usuário vai v
 ## Lógica
 
 A lógica utilizada para validar o cartão foi do algoritmo de Luhn, onde o número é colocado da direita para a esquerda e dobra-se a cada segundo digito. Se o número resultante tiver dois digitos eles são somados para se obter um único digiyo. Logo após é somado todos os digitos incluido os que não foram dobrados e se o resultado final for múltiplo de 10 o número é valido.Caso contrário, o número é inválido.
+
+## 🛠 Tecnologias aplicadas
+
+- JAVASCRIPT
+- HTML
+- CSS
+- GIT e GITHUB
+- TESTES UNITÀRIOS

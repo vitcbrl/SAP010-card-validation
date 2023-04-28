@@ -1,5 +1,5 @@
 .background{
-  background: url("./images/img1.jpg") no-repeat;
+  background: url("/images/img1.jpg") no-repeat;
   position: fixed;
   top: 0;
   left: 0;

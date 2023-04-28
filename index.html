@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Cartão de Crédito Válido</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="background"></div>
+  <header>
+    <ul>
+      <li>Plantas Carnivoras</li>
+      <li>Peças novas</li>
+      <li>Contatos</li>
+      <li>Sobre</li>
+    </ul>
+  </header>
+  <main class="container">
+    <!---->
+    <form class="formulario" method="post">
+      <div class="form-name">
+        <h4>💫 Verifique se seu cartão é valido no Plantas Carnivoras e aproveite descontos exclusivos 💫</h4>
+        <label for="nome">Nome do cartão</label>
+        <input type="text" maxlength="15" name="nome" id="nome" placeholder="ex: Vitoria C">
+      </div>
+
+      <div class="form-number">
+        <label for="number-card">Número do cartão</label>
+        <input type="text" maxlength="16" name="numver-card" id="card-number" placeholder="ex: 1234 5678 9123 0000" required>
+      </div>
+
+      <div class="form-date">
+        <label for="expire">Exp. Date (MM/YY)</label>
+
+        <input type="text" maxlength="2" name="expire" placeholder="MM" id="mes">
+        <input type="text" maxlength="2" name="expire" placeholder="YY" id="ano">
+      </div>
+
+      <div class="form-cvc">
+        <label for="cvc">CVC</label>
+        <input type="text" maxlength="3" name="cvc" id="cvc" placeholder="ex: 123">
+      </div>
+
+      <button id="test">Verificação</button>
+    </form>
+
+    <!--<h4> 💫 Verifique se seu cartão é valido no Plantas Carnivoras e aproveite descontos exclusivos 💫 </h4>-->
+
+
+    <!--<label for="card-number">Digite o número</label>
+    <input type="text" id="card-number" required pla>
+    <button id="test">Verificar</button>-->
+
+  </main>
+  <footer></footer>
+  <script src="index.js" type="module"></script>
+</body>
+
+</html>

@@ -39,9 +39,8 @@ const validator = {
     const maskLength = creditCardNumber.length - 4;
     let mask = "";
     for (let i = 0; i < maskLength; i++) {
-      // Substitui por um número aleatório ou pelo emoji 🐱
+      // Substitui por #
       mask += "#";
-      //A função Math.random() retorna um número pseudo-aleatório no intervalo
     }
     return mask + creditCardNumber.substring(maskLength);
     //esse metodo substring extrai caracteres entre indices (posições) de uma string e retorna uma substring
